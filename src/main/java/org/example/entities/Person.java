@@ -5,7 +5,7 @@ import org.example.Contact;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class PersonRequest {
+public class Person {
         Long id;
         String fin;
         String name;
