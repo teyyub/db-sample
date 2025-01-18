@@ -1,28 +1,35 @@
-package org.example.entities;
+package org.example.dtos;
 
-import org.example.Contact;
+import org.example.entities.Contact;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Person {
+public class PersonResponse {
         Long id;
         String fin;
         String name;
         String surname;
-        LocalDateTime created;
+        //LocalDateTime created;
         Long createdBy;
         List<Contact> contacts;
 
-    public Person(Long id, String name, String surname, LocalDateTime created, List<Contact> contacts) {
+    public PersonResponse(Long id, String name, String surname, LocalDateTime created, List<Contact> contacts) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.created = created;
+       // this.created = created;
         this.contacts = contacts;
     }
 
-    public Person(String fin, String name, String surname) {
+    public PersonResponse(Long id, String fin, String name, String surname) {
+        this.id = id;
+        this.fin = fin;
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public PersonResponse(String fin, String name, String surname) {
         this.fin = fin;
         this.name = name;
         this.surname = surname;
@@ -44,11 +51,23 @@ public class Person {
         return surname;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
-    }
+//    public LocalDateTime getCreated() {
+//        return created;
+//    }
 
     public List<Contact> getContacts() {
         return contacts;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonResponse{" +
+                "id=" + id +
+                ", fin='" + fin + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", createdBy=" + createdBy +
+                ", contacts=" + contacts +
+                '}';
     }
 }

@@ -1,8 +1,7 @@
 package org.example.dtos;
 
-import org.example.Contact;
+import org.example.entities.Contact;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class PersonRequest {
@@ -12,7 +11,7 @@ public class PersonRequest {
         String surname;
 //        LocalDateTime created;
         Long createdBy;
-        List<Contact> contacts;
+        List<ContactRequest> contacts;
 
 
 
@@ -42,7 +41,12 @@ public class PersonRequest {
 //        return created;
 //    }
 
-    public List<Contact> getContacts() {
+
+    public List<ContactRequest> getContacts() {
         return contacts;
+    }
+
+    public void setContacts(List<ContactRequest> contacts) {
+        this.contacts = contacts;
     }
 }

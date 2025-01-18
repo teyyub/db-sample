@@ -1,14 +1,14 @@
-package org.example;
+package org.example.dtos;
 
 import java.time.LocalDateTime;
 
-public class Contact {
+public class ContactResponse {
     Long id;
     String prefix;
     String number;
     LocalDateTime created;
 
-    public Contact(Long id, String prefix, String number, LocalDateTime created) {
+    public ContactResponse(Long id, String prefix, String number, LocalDateTime created) {
         this.id = id;
         this.prefix = prefix;
         this.number = number;

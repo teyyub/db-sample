@@ -1,6 +1,4 @@
-package org.example.dtos;
-
-import org.example.Contact;
+package org.example.entities;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,6 +24,10 @@ public class Person {
         this.fin = fin;
         this.name = name;
         this.surname = surname;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFin() {

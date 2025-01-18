@@ -1,6 +1,6 @@
 package org.example.repositories;
 
-import org.example.dtos.Person;
+import org.example.entities.Person;
 
 import java.util.ArrayList;
 import java.util.List;
